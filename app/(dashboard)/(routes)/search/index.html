@@ -1,0 +1,53 @@
+<!-- // import NeoVis from 'neovis.js';
+
+
+// const SearchPage = () => {
+
+
+
+//     return ( 
+//         <div>
+//             This is a search page
+//         </div>
+//      );
+// } -->
+ 
+<!-- // export default SearchPage; -->
+<!-- import NeoVis from 'neovis.js'; -->
+
+<html>
+    <head>
+        <style type="text/css">
+            #viz {
+                width: 900px;
+                height: 700px;
+            }
+        </style>
+        
+        <script src="https://unpkg.com/neovis.js@2.0.2"></script>
+        <script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
+    </head>
+    <script>
+        function draw() {
+            var config = {
+                container_id: "viz",
+                server_url: "neo4j+s://3c2ec0e6.databases.neo4j.io",
+                server_user:  'neo4j',
+                server_password: 'xkpb_N7Gb_TKEgjOU8W3np4vk8wblNYLDhGxMr9spwk',
+                labels: {
+
+                },
+                relationships: {
+
+                },
+                initial_cypher: "MATCH (n) RETURN n"
+            }
+
+            var viz = new NeoVis.default(config)
+            viz.render()
+        }
+    </script>
+    <body onload="draw()">
+        <div id="viz"></div>
+    </body>
+</html>
